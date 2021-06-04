@@ -1,155 +1,185 @@
-<!DOCTYPE html>
+<!-- Colocar identação correcta, facilita a leitura -->
+
+<DOCTYPE html> <!-- faltava um < no início do elemento -->
 <html>
-<header>
-	<meta charset="utf-8">
-	<title>Biblioteca Municipal</title>
-	<h1>Bliblioteca da Vila</h1>
-</header>
-<body>
-<nav>
-	<ul>
-		<a href="#Biblioteca"><li>A biblioteca</li></a>
-		<a href="#Serviços"><li>Serviços e Atividades</li></a>
-		<a href="#Membro"><li>Torna-te membro</li></a>
-		<a href="#Contactos"><li>Contactos</li></a>
-	</ul>
-</nav>
-<article>
-	<section>
-	<h1>A Biblioteca<a name="Biblioteca"></a></h1>
-	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-	<a href="Livros">
-		<img src="./biblioteca/assets/img/livros.jpeg">
-	</a>
-	</section>
-	<section>
-	<h1>Serviços e Atividades<a name="Serviços"></a></h1>
-	<h1>Aqui podes encontrar informação sobre os nossos serviços e actividades</h1>
-	<pre>
-		
-	</pre>
-	</section>
-	<section></section>
-	<h3>Serviços</h3>
-	<p></p>
-	<ul>
-		<li>Acesso a repositórios especializados em diversas áreas</li>
-		<li>Wireless gratuito</li>
-		<li>Máquina e bebidas e snacks</li>
-	</ul>
-	<p></p>
-	<h3>Atividades</h3>
-	<p></p>
-	<ul>
-		<li>Hora do conto</li>
-		<ol>
-			<li>10:00 ás 11:00 dos 3 aos 5 anos</li>
-			<li>11.00 ás 12:00 dos 6 aos 10 anos</li></ol>
-		<li>Manhãs com livros</li>
-		<ol>
-			<li>Clube do livro policial - 1º sábado de cada mês</li>
-			<li>Clube do livro romance histórico - 3º sábado de cada mês</li></ol>
-		<li>Cinema à sexta</li>
-		<ol>
-			<li>Cinema do mundo</li>
-			<li>Desenhos animados</li>
-			<li>Documentários</li>
-			<li>Filmes premiados</li></ol>
-	</ul>
-	</section>
-	<section>
-	<h1>Torna-te membro<a name="Membro"></a></h1>
-	<h1>É simples e rápido</h1>
-	<table border="1">
-		<tr>
-			<th></th>
-			<th>Acesso</th>
-			<th>Actividades</th>
-			<th>Preço</th>
-		</tr>
-		<tr>
-			<td>Cartão Livrólico</td>
-			<td>Acesso ás nossas instalações todos os dias</td>
-			<td>Participação gratuita em todas as atividades</td>
-			<td>15€/Ano</td>
-		</tr>
-		<tr>
-			<td>Cartão Amigo dos Livros</td>
-			<td>Acesso às nossas instalações todos os dias</td>
-			<td>Não inclui atividades gratuitas</td>
-			<td>8€/Ano</td>
-		</tr>
-		<tr>
-			<td colspan="4">*Temos descontos para famílias, consulte as condições</td>
-		</tr>
-	</table>
-	</section>
-	<p></p>
-	<fieldset>
-		<legend>Dados pessoais:</legend>
-		<form>
-			<select name="Opção">
-				<option value="Cartão Livrólico">Cartão Livrólico</option>
-				<option value="Cartão Amigo dos livros">Cartão Amigo dos Livros</option>
-			</select>
-		</form>
-	</fieldset>
-	<fieldset>
-		<legend>Dados pessoais:</legend> Nome:
-		<input type="text" name="nome"><br>
-		<p></p>
-		Sexo:
-			<input type="radio" name="genero" value="Masculino" checked> Masculino
-			<input type="radio" name="genero" value="Feminino" checked> Feminino <br>
+	<!-- Estás a confundir o elemento <header> com o elemento <head>, aqui
+		queres definir um <head>, vê a diferença nos apontamentos para clarificares as dúvidas -->
+	<head>
+		<meta charset="utf-8">
+		<title>Biblioteca Municipal</title>
+	</head>
+
+	<!-- <header>
+		<meta charset="utf-8">
+		<title>Biblioteca Municipal</title>
+		<h1>Bliblioteca da Vila</h1>
+	</header> -->
+	<body>
+		<header>
+			<h1>Biblioteca da Vila</h1>
+		</header>
+		<nav>
+			<ul>
+				<!-- Nota de boas práticas: não utilizar maiúsculas nem caracteres especiais (ex.: #servicos)
+				e normalmente escrevemos tudo o que é código em inglês (ex.: #services) -->
+				<!-- o elemento <i> deve vir imediatamente a seguir ao <ul> e só depois a <a> -->
+				<a href="#Biblioteca"><li>A biblioteca</li></a>
+				<a href="#Serviços"><li>Serviços e Atividades</li></a>
+				<a href="#Membro"><li>Torna-te membro</li></a>
+				<a href="#Contactos"><li>Contactos</li></a>
+			</ul>
+		</nav>
+		<article> <!-- retirar elemento article, não é necessário, deixar só as sections -->
+			<!-- retiramos aqui o elemento âncora e colocamos um id="Biblioteca" no elemento para onde queremos que a nossa âncora nos reenvie, já temos a âncora no elemnto que queremos que seja direccionado aqui estamos apenas a identificar o elemento de chegada, fazer o mesmo em todas as secções -->
+			<section id="Biblioteca">
+				<h1>A Biblioteca <!-- <a name="Biblioteca"></a> --> </h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<!-- Neste caso a imagem não necessita de estar dentro de uma âncora pois não estamos a pedir que ela faça ligação com outra página ou secção-->
+				<a href="Livros">
+					<img src="./biblioteca/assets/img/livros.jpeg">
+				</a>
+			</section>
+			<section>
+				<h1>Serviços e Atividades<a name="Serviços"></a></h1>
+				<!-- sugiro h2 no parágrafo abaixo -->
+				<h1>Aqui podes encontrar informação sobre os nossos serviços e actividades</h1>
+				<pre><!-- retirar elemento <pre> -->
+					
+				</pre>
+			</section>
+			<section></section> <!-- tens o elemento <section> a ser fechado 2x, esta está a mais -->
+			<h3>Serviços</h3>
+			<!-- retirar o <p> vazio, nesta fase para inserir um espaçamento utilizar <br>, rever em todos -->
 			<p></p>
-		<form>
-			Data de nascimento:
-			<input type="date" name="nascimento">
-		</form>
-		<p></p>
-		Estado Civil:
-			<select name="Escolha uma opção">
-				<option value="casado"> Casado</option>
-				<option value="solteiro"> Solteiro</option>
-				<option value="divorciado"> Divorciado</option>
-				<option value="viuvo"> Viúvo</option>
-			</select>
-		Nr de filhos:
-			<input type="number" name="escala" min="0" max="5" step="1"> <br>
-	</fieldset>
-	<fieldset>
-		<legend>Contactos:</legend> Código-Postal
-		<input type="Código-Postal">
-		<p></p>
+			<ul>
+				<li>Acesso a repositórios especializados em diversas áreas</li>
+				<li>Wireless gratuito</li>
+				<li>Máquina e bebidas e snacks</li>
+			</ul>
+			<p></p>
+			<h3>Atividades</h3>
+			<p></p>
+			<ul>
+				<li>Hora do conto</li>
+				<ol>
+					<li>10:00 ás 11:00 dos 3 aos 5 anos</li>
+					<li>11.00 ás 12:00 dos 6 aos 10 anos</li>
+				</ol>
+				<li>Manhãs com livros</li>
+				<ol>
+					<li>Clube do livro policial - 1º sábado de cada mês</li>
+					<li>Clube do livro romance histórico - 3º sábado de cada mês</li>
+				</ol>
+				<li>Cinema à sexta</li>
+				<ol>
+					<li>Cinema do mundo</li>
+					<li>Desenhos animados</li>
+					<li>Documentários</li>
+					<li>Filmes premiados</li>
+				</ol>
+			</ul>
+		</section>
+		<section>
+			<h1>Torna-te membro<a name="Membro"></a></h1>
+			<h1>É simples e rápido</h1> <!-- utilizar h2 -->
+			<table border="1">
+				<tr> <!-- opção usar <thead> -->
+					<th></th>
+					<th>Acesso</th>
+					<th>Actividades</th>
+					<th>Preço</th>
+				</tr>
+				<tr>
+					<td>Cartão Livrólico</td>
+					<td>Acesso ás nossas instalações todos os dias</td>
+					<td>Participação gratuita em todas as atividades</td>
+					<td>15€/Ano</td>
+				</tr>
+				<tr>
+					<td>Cartão Amigo dos Livros</td>
+					<td>Acesso às nossas instalações todos os dias</td>
+					<td>Não inclui atividades gratuitas</td>
+					<td>8€/Ano</td>
+				</tr>
+				<tr>
+					<td colspan="4">*Temos descontos para famílias, consulte as condições</td>
+				</tr>
+			</table>
+		</section>
+<p></p>
+
+<!-- Sugiro refazeres esta parte, neste momento tens vários forms, deves ter apenas um com toda a estrutura de campos dentro desse form -->
+<fieldset>
+	<legend>Dados pessoais:</legend>
+	<form>
+		<select name="Opção">
+			<option value="Cartão Livrólico">Cartão Livrólico</option>
+			<option value="Cartão Amigo dos livros">Cartão Amigo dos Livros</option>
+		</select>
+	</form>
+</fieldset>
+<fieldset>
+	<legend>Dados pessoais:</legend> Nome:
+	<input type="text" name="nome"><br>
+	<p></p>
+	Sexo:
+	<!-- apenas um radio button deve estar anotado como checked -->
+	<input type="radio" name="genero" value="Masculino" checked> Masculino
+	<input type="radio" name="genero" value="Feminino" checked> Feminino <br>
+	<p></p>
+	<form>
+		Data de nascimento:
+		<input type="date" name="nascimento">
+	</form>
+	<p></p>
+	Estado Civil:
+	<select name="Escolha uma opção">
+		<option value="casado"> Casado</option>
+		<option value="solteiro"> Solteiro</option>
+		<option value="divorciado"> Divorciado</option>
+		<option value="viuvo"> Viúvo</option>
+	</select>
+	Nr de filhos:
+	<input type="number" name="escala" min="0" max="5" step="1"> <br>
+</fieldset>
+<fieldset>
+	<legend>Contactos:</legend> 
+	<!-- Corrigir o atributo type do input -->
+	Código-Postal
+	<input type="Código-Postal">
+	<p></p>
 	Morada:
 	<form>
 		<textarea rows="5" cols="100">
 		</textarea>
 	</form>
 	<p></p>
-	Email: 
+	Email:
 	<input type="Email" name="Email:"><br>
 	<p></p>
 	Password:
 	<input type="Password" name="Password:">
-	</fieldset>
-</article>
-<footer>
-	<i><small>Pretendo ser contactado através de:</i></small>
-		<input type="checkbox" name="Email" checked>Email
-		<input type="checkbox" name="Telemovel" checked>Telemóvel
-		<input type="checkbox" name="Correio" checked>Correio
-	<form>
-		<button type="button">Limpar</button>
-		<button type="button">Confirmar</button>
-	</form>
-	<p></p>
+</fieldset>
+</article> <!-- retirar este elemento que fecha o article que já retiraste acima -->
+
+<i><small>Pretendo ser contactado através de:</i></small>
+<input type="checkbox" name="Email" checked>Email
+<input type="checkbox" name="Telemovel" checked>Telemóvel
+<input type="checkbox" name="Correio" checked>Correio
+<form>
+	<button type="button">Limpar</button>
+	<button type="button">Confirmar</button>
+</form>
+<p></p>
+	<!-- Para melhorar colocar a informação do rodapé dentro de <div> visualmente neste momento não faz nada mas vai ser útil no futuro -->
+	<!-- Falta ligação à âncora do menu -->
+	<footer> 
 	Praceta das Flores, 35<a name="Contactos"></a><br>
 	0000-100 Porto
 	<p></p>
 	Tel: 22 000 00 00
 	<p></p>
 	Horário: 9:00 ás 19:00
-</footer>
+	</footer>
 </body>
 </html>
