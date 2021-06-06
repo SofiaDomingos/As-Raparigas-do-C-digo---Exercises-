@@ -1,0 +1,103 @@
+<DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Biblioteca Municipal</title>
+</head>
+<body>
+	<header>
+		<h1>Biblioteca da Vila</h1>
+	</header>
+	<nav>
+		<ul>	
+			<li><a href="index.html">A biblioteca</a></li>
+			<li><a href="servicos.html">Serviços e Atividades</a></li>
+			<li><a href="#membro">Torna-te membro</a></li>
+			<li><a href="#contactos">Contactos</a></li>
+		</ul>
+	</nav>
+		<section id="membro">
+			<h1>Torna-te membro</h1>
+			<h2>É simples e rápido</h2>
+			<table border="1">
+				<thead>
+					<td></td>
+					<td>Acesso</td>
+					<td>Actividades</td>
+					<td>Preço</td>
+				</thead>
+				<tr>
+					<td>Cartão Livrólico</td>
+					<td>Acesso ás nossas instalações todos os dias</td>
+					<td>Participação gratuita em todas as atividades</td>
+					<td>15€/Ano</td>
+				</tr>
+				<tr>
+					<td>Cartão Amigo dos Livros</td>
+					<td>Acesso às nossas instalações todos os dias</td>
+					<td>Não inclui atividades gratuitas</td>
+					<td>8€/Ano</td>
+				</tr>
+				<tr>
+					<td colspan="4">*Temos descontos para famílias, consulte as condições</td>
+				</tr>
+			</table>
+			<br/>
+			<form>
+				<fieldset>
+				<legend>Dados pessoais:</legend>br></legend>
+				<select name="Opção">
+					<option value="cartao livrolico">Cartão Livrólico</option>
+					<option value="cartao amigo">Cartão Amigo dos Livros</option>
+				</select>
+				</fieldset>
+			<fieldset>
+				<legend><b>Dados pessoais:</b></legend> 
+				Nome: <input type="text" name="nome"><br> Sexo:
+				<input type="radio" name="genero" value="Masculino" checked> Masculino
+				<input type="radio" name="genero" value="Feminino"> Feminino <br><br>
+				Data de Nascimento: <input type="date" name="nascimento"> <br> <br>
+				Estado Civil:
+				<select name="escolha uma opcao">
+					<option value="escolha" disabled selected>Escolha uma opção</option>
+					<option value="casado"> Casado</option>
+					<option value="solteiro"> Solteiro</option>
+					<option value="divorciado"> Divorciado</option>
+					<option value="viuvo"> Viúvo</option>
+				</select> 
+				Nr de filhos: <input type="number" name="escala" min="0" max="5" step="1"> <br>
+			</fieldset>
+			<br><br>
+			<fieldset>
+				<legend><b>Contactos:</b></legend> 
+				Código-Postal
+				<input type="text" name="indicativo" placeholder="0000" pattern="[0-9]{4}" size="4" title="Pf insira o indicativo de quatro dígitos.">
+				<input type="text" name="extensao" placeholder="000" pattern="[0-9]{3}" size="3" title="Pf insira a extensão de 3 dígitos.">
+				<br><br>Morada:<br>
+				<textarea name="morada" rows="5" cols="100"></textarea>
+				<br><br>Email:<input type="email" name="email:" placeholder="exemplo@hotmail.com">
+				<br><br>Password: <input type="password" name="password:">
+			</fieldset>
+			<div>
+				<small>
+				<i>Pretendo ser contactado através de:</i>
+				<input type="checkbox" name="Email" checked>Email
+				<input type="checkbox" name="Telemovel" checked>Telemóvel
+				<input type="checkbox" name="Correio" checked>Correio
+				</small><br>
+				<input type="limpar" value="Limpar">
+				<input type="confirmar" value="Confirmar">
+			</div>
+		</form>
+		</section>
+		<footer id="contactos">
+			<div>
+				<p>Praceta das Flores, 35 <br> 0000-100 Porto </p>
+			</div> 
+			<div>
+				<p>Tel: 22 000 00 00</p>
+				<p>Horário: 9:00h ás 19:00h</p>
+			</div>
+		</footer>
+</body>
+</html>
